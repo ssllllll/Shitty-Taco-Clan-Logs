@@ -1,0 +1,3843 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>&#119816;&#119846;&#119849;&#119838;&#119851;&#119842;&#119854;&#119846; &#119819;&#119834;&#119853;&#119834;&#119846;│&#119816;.&#119819; - ╢&#127909;╟❱youtube❰</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+            font-weight: 700;
+        }
+
+        body {
+            background-color: #36393e;
+            color: #dcddde;
+            font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        a {
+            color: #00aff4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            object-fit: contain;
+        }
+
+        .markdown {
+            max-width: 100%;
+            line-height: 1.3;
+            overflow-wrap: break-word;
+        }
+
+        .preserve-whitespace {
+            white-space: pre-wrap;
+        }
+
+        .spoiler-text {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .spoiler-text--hidden {
+            cursor: pointer;
+            background-color: #202225;
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .spoiler-text--hidden:hover {
+            background-color: rgba(32, 34, 37, 0.8);
+        }
+
+        .spoiler-text--hidden::selection {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .quote {
+            margin: 0.1em 0;
+            padding-left: 0.6em;
+            border-left: 4px solid #4f545c;
+            border-radius: 3px;
+        }
+
+        .pre {
+            background-color: #2f3136;
+            font-family: "Consolas", "Courier New", Courier, monospace;
+        }
+
+        .pre--multiline {
+            margin-top: 0.25em;
+            padding: 0.5em;
+            border: 2px solid #282b30;
+            border-radius: 5px;
+            color: #b9bbbe;
+        }
+
+        .pre--multiline.hljs {
+            background-color: #2f3136;
+            color: #b9bbbe;
+        }
+
+        .pre--inline {
+            padding: 2px;
+            border-radius: 3px;
+            font-size: 0.85em;
+        }
+
+        .mention {
+            border-radius: 3px;
+            padding: 0 2px;
+            color: #7289da;
+            background-color: rgba(114, 137, 218, .1);
+            font-weight: 500;
+        }
+
+        .timestamp {
+            border-radius: 3px;
+            padding: 0 2px;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .emoji {
+            width: 1.325em;
+            height: 1.325em;
+            margin: 0 0.06em;
+            vertical-align: -0.4em;
+        }
+
+        .emoji--small {
+            width: 1em;
+            height: 1em;
+        }
+
+        .emoji--large {
+            width: 2.8em;
+            height: 2.8em;
+        }
+
+        .preamble {
+            display: grid;
+            margin: 0 0.3em 0.6em 0.3em;
+            max-width: 100%;
+            grid-template-columns: auto 1fr;
+        }
+
+        .preamble__guild-icon-container {
+            grid-column: 1;
+        }
+
+        .preamble__guild-icon {
+            max-width: 88px;
+            max-height: 88px;
+        }
+
+        .preamble__entries-container {
+            grid-column: 2;
+            margin-left: 0.6em;
+        }
+
+        .preamble__entry {
+            font-size: 1.4em;
+            color: #ffffff;
+        }
+
+        .preamble__entry--small {
+            font-size: 1em;
+        }
+
+        .chatlog {
+            max-width: 100%;
+        }
+
+        .chatlog__message-group {
+            display: grid;
+            margin: 0 0.6em;
+            padding: 0.9em 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            grid-template-columns: auto 1fr;
+        }
+
+        .chatlog__reference-symbol {
+            grid-column: 1;
+            margin: 8px 4px 4px 18px;
+            border-left: 2px solid #4f545c;
+            border-top: 2px solid #4f545c;
+            border-radius: 8px 0 0 0;
+        }
+
+        .chatlog__reference {
+            display: flex;
+            grid-column: 2;
+            margin-bottom: 0.25em;
+            font-size: 0.875em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            align-items: center;
+            color: #b5b6b8;
+        }
+
+        .chatlog__reference-avatar {
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            margin-right: 0.25em;
+        }
+
+        .chatlog__reference-name {
+            margin-right: 0.25em;
+            font-weight: 600;
+        }
+
+        .chatlog__reference-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__reference-content a:hover {
+            text-decoration: none;
+        }
+
+        .chatlog__reference-link {
+            cursor: pointer;
+            color: #b5b6b8;
+        }
+
+        .chatlog__reference-link * {
+            display: inline;
+            pointer-events: none;
+        }
+
+        .chatlog__reference-link:hover {
+            color: #ffffff;
+        }
+
+        .chatlog__reference-link:hover *:not(.spoiler-text) {
+            color: #ffffff;
+        }
+
+        .chatlog__reference-edited-timestamp {
+            margin-left: 0.25em;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__author-avatar-container {
+            grid-column: 1;
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+        }
+
+        .chatlog__author-avatar {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .chatlog__messages {
+            grid-column: 2;
+            min-width: 50%;
+        }
+
+        .chatlog__author-name {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chatlog__timestamp {
+            margin-left: 0.3em;
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__message {
+            padding: 0.1em 0.3em;
+            margin: 0 -0.3em;
+            background-color: transparent;
+            transition: background-color 1s ease;
+        }
+
+        .chatlog__message--highlighted {
+            background-color: rgba(114, 137, 218, 0.2);
+        }
+
+        .chatlog__message--pinned {
+            background-color: rgba(249, 168, 37, 0.05);
+        }
+
+        .chatlog__content {
+            font-size: 0.95em;
+            word-wrap: break-word;
+        }
+
+        .chatlog__edited-timestamp {
+            margin-left: 0.15em;
+            font-size: 0.8em;
+        }
+
+        .chatlog__attachment {
+            display: inline-block;
+            position: relative;
+            margin-top: 0.3em;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden {
+            cursor: pointer;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .chatlog__attachment--hidden * {
+            pointer-events: none;
+        }
+
+        .chatlog__attachment-spoiler-caption {
+            display: none;
+            z-index: 999;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0.4em 0.8em;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 20px;
+            color: #dcddde;
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-spoiler-caption {
+            display: block;
+        }
+
+        .chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption {
+            color: #fff;
+        }
+
+        .chatlog__attachment-media {
+            vertical-align: top;
+            max-width: 45vw;
+            max-height: 500px;
+            border-radius: 3px;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-media {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic {
+            width: 100%;
+            max-width: 520px;
+            height: 40px;
+            padding: 10px;
+            background-color: #2f3136;
+            border: 1px solid #292b2f;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-generic {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic-icon {
+            float: left;
+            width: 30px;
+            height: 100%;
+            margin-right: 10px;
+        }
+
+        .chatlog__attachment-generic-size {
+            color: #72767d;
+            font-size: 12px;
+        }
+
+        .chatlog__attachment-generic-name {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__edited-timestamp {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__embed {
+            display: flex;
+            margin-top: 0.3em;
+            max-width: 520px;
+        }
+
+        .chatlog__embed-color-pill {
+            flex-shrink: 0;
+            width: 0.25em;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .chatlog__embed-color-pill--default {
+            background-color: #202225;
+        }
+
+        .chatlog__embed-content-container {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5em 0.6em;
+            background-color: rgba(46, 48, 54, 0.3);
+            border: 1px solid rgba(46, 48, 54, 0.6);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        .chatlog__embed-content {
+            display: flex;
+            width: 100%;
+        }
+
+        .chatlog__embed-text {
+            flex: 1;
+        }
+
+        .chatlog__embed-author {
+            display: flex;
+            margin-bottom: 0.3em;
+            align-items: center;
+        }
+
+        .chatlog__embed-author-icon {
+            margin-right: 0.5em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .chatlog__embed-author-name {
+            font-size: 0.875em;
+            font-weight: 600;
+            color: #ffffff
+        }
+
+        .chatlog__embed-author-name-link {
+            color: #ffffff;
+        }
+
+        .chatlog__embed-title {
+            margin-bottom: 0.2em;
+            font-size: 0.875em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .chatlog__embed-description {
+            font-weight: 500;
+            font-size: 0.85em;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-fields {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .chatlog__embed-field {
+            flex: 0;
+            min-width: 100%;
+            max-width: 506px;
+            padding-top: 0.6em;
+            font-size: 0.875em;
+        }
+
+        .chatlog__embed-field--inline {
+            flex: 1;
+            flex-basis: auto;
+            min-width: 150px;
+        }
+
+        .chatlog__embed-field-name {
+            margin-bottom: 0.2em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .chatlog__embed-field-value {
+            font-weight: 500;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-thumbnail {
+            flex: 0;
+            margin-left: 1.2em;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-image-container {
+            margin-top: 0.6em;
+        }
+
+        .chatlog__embed-image {
+            max-width: 500px;
+            max-height: 400px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-footer {
+            margin-top: 0.6em;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-footer-icon {
+            margin-right: 0.2em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .chatlog__embed-footer-text {
+            vertical-align: middle;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        .chatlog__embed-youtube-container {
+            margin-top: 0.6em;
+        }
+
+        .chatlog__embed-youtube {
+            border: 0;
+            border-radius: 3px;
+        }
+
+        .chatlog__reactions {
+            display: flex;
+        }
+
+        .chatlog__reaction {
+            display: flex;
+            align-items: center;
+            margin: 0.35em 0.1em 0.1em 0.1em;
+            padding: 0.2em 0.35em;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        .chatlog__reaction-count {
+            min-width: 9px;
+            margin-left: 0.35em;
+            font-size: 0.875em;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .chatlog__bot-tag {
+            position: relative;
+            top: -.2em;
+            margin-left: 0.3em;
+            padding: 0.05em 0.3em;
+            border-radius: 3px;
+            vertical-align: middle;
+            line-height: 1.3;
+            background-color: #5865F2;
+            color: #ffffff;
+            font-size: 0.625em;
+            font-weight: 500;
+        }
+
+        .postamble {
+            margin: 1.4em 0.3em 0.6em 0.3em;
+            padding: 1em;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .postamble__entry {
+            color: #ffffff;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler-text--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler-text--hidden');
+            }
+            if (element && element.classList.contains('chatlog__attachment--hidden')) {
+                event.preventDefault();
+                element.classList.remove('chatlog__attachment--hidden');
+            }
+        }
+    </script>
+
+    <svg style="display: none">
+        <symbol id="icon-attachment" viewBox="0 0 720 960">
+            <path fill="#f4f5fb" d="M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z" />
+            <path fill="#7789c4" d="M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z" />
+            <path fill="#f4f5fb" d="M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z" />
+            <path fill="#7789c4" d="M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z" />
+        </symbol>
+    </svg>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/785755670807838740/a_1c63ecb8425a5ffde8c99ba4425546de.png" alt="Guild icon" loading="lazy">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">&#119816;&#119846;&#119849;&#119838;&#119851;&#119842;&#119854;&#119846; &#119819;&#119834;&#119853;&#119834;&#119846;│&#119816;.&#119819;</div>
+        <div class="preamble__entry">╚════♛On Top♛════╝ / ╢&#127909;╟❱youtube❰</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 05:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="863550736817061948" id="message-863550736817061948" title="Message sent: 10-Jul-21 05:42 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt help</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 05:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="863550737917542400" id="message-863550737917542400" title="Message sent: 10-Jul-21 05:42 PM">
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(229,72,55,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+                                                <img class="chatlog__embed-author-icon" src="https://images-ext-1.discordapp.net/external/ukQR5LhnF_haCWsuCNHfqSges8Zm3Pbjccr0KdgIE4E/%3Fsize%3D128/https/cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png" alt="Author icon" loading="lazy" onerror="this.style.visibility='hidden'">
+
+                                                <span class="chatlog__embed-author-name">
+YouTube Help                                                </span>
+                                        </div>
+
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Run a command by typing the prefix and the command, such as: yt video cat
+To get more information on a command, run this command again with the command&#39;s name as an argument.</div>
+                                        </div>
+
+                                        <div class="chatlog__embed-fields">
+                                                <div class="chatlog__embed-field chatlog__embed-field--inline">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">General Commands</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace"><span class="pre pre--inline">help</span> <span class="pre pre--inline">invite</span> <span class="pre pre--inline">ping</span> <span class="pre pre--inline">statistics</span> <span class="pre pre--inline">support</span> <span class="pre pre--inline">test</span> <span class="pre pre--inline">policy</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field chatlog__embed-field--inline">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">YouTube Commands</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace"><span class="pre pre--inline">notifier</span> <span class="pre pre--inline">prefix</span> <span class="pre pre--inline">channel</span> <span class="pre pre--inline">lyrics</span> <span class="pre pre--inline">playlist</span> <span class="pre pre--inline">random</span> <span class="pre pre--inline">related</span> <span class="pre pre--inline">trending</span> <span class="pre pre--inline">video</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">Links</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace"><a href="https://discordapp.com/api/oauth2/authorize?client_id=456633518882160642&scope=bot&permissions=0">Invite</a> | <a href="https://top.gg/bot/youtube/vote">Vote</a> | <a href="https://discord.gg/xUrSF2J">Get Help</a></div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                            </div>
+
+
+                                <div class="chatlog__embed-footer">
+
+                                    <span class="chatlog__embed-footer-text">
+Created by ThatTonybo#0001, JPBBerry#0001 &amp; BowsiePup#0001.
+
+                                    </span>
+                                </div>
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 05:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="863550794421764128" id="message-863550794421764128" title="Message sent: 10-Jul-21 05:42 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 05:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="863550795643486218" id="message-863550795643486218" title="Message sent: 10-Jul-21 05:42 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Interactive setup comming soon. For now please read the help below.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="863550800999219200" id="message-863550800999219200" title="Message sent: 10-Jul-21 05:42 PM">
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(229,72,55,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+                                                <img class="chatlog__embed-author-icon" src="https://images-ext-1.discordapp.net/external/ukQR5LhnF_haCWsuCNHfqSges8Zm3Pbjccr0KdgIE4E/%3Fsize%3D128/https/cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png" alt="Author icon" loading="lazy" onerror="this.style.visibility='hidden'">
+
+                                                <span class="chatlog__embed-author-name">
+Notifier                                                </span>
+                                        </div>
+
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">All commands listed here are to be prefixed with <span class="pre pre--inline">yt notifier</span> or <span class="pre pre--inline">yt notify</span>
+Example: <span class="pre pre--inline">yt notifier list</span> or <span class="pre pre--inline">yt notify list</span></div>
+                                        </div>
+
+                                        <div class="chatlog__embed-fields">
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">add &lt;Youtube channel&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Subscribes to Youtube channel in the current Discord channel
+<strong>Note</strong>: Custom urls may not always work, if possible please use the url with the channel Id instead.</div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">formatlive &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets notification message for livestreams in this server.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">format &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets notification message in this server.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">formatchannel &lt;youtube channel URL&gt; &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets notification message for the channel provided.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">formatchannellive &lt;youtube channel URL&gt; &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets livestream notification message for the channel provided.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">list</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Shows all the subscribed to Youtube channels in the server.</div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">remove &lt;Youtube channel / all&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Unsubscribe from Youtube channel in the current Discord channel or all Youtube channels in the server.
+<strong>Note</strong>: Custom urls may not always work, if possible please use the url with the channel Id instead.</div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">test</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sends a test upload notification in your current Discord channel.</div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="863550806774513684" id="message-863550806774513684" title="Message sent: 10-Jul-21 05:42 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">For quick setup please run the following commands in the text channel where u want your notifications to be sent (without the &lt; &gt;).To add a channel run <span class="pre pre--inline">yt notifier add &lt;CHANNEL URL HERE&gt;</span>. If you wish to change the message sent in the notification use <span class="pre pre--inline">yt notifier format &lt;THE MESSAGE YOU WANT TO SAY&gt;</span>, the placeholders can be found in the message above</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 05:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553212216770581" id="message-863553212216770581" title="Message sent: 10-Jul-21 05:52 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UC-RznkMqItgMDstC9wdHlJQ">https://www.youtube.com/channel/UC-RznkMqItgMDstC9wdHlJQ</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UC-RznkMqItgMDstC9wdHlJQ">
+                                                    <div class="markdown preserve-whitespace">angelnonosiyt HP</div>
+                                                </a>
+                                        </div>
+
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-1.discordapp.net/external/MYEUPcDNICLcadElV9-CZ92Ln62Lz2lMZGYRU5W7nEM/https/yt3.ggpht.com/mW5wMvGMt5jP0OZ2QGQxNk6x_iIGf4EY0H7Vkxh8Cz6U-x_3uln1_iiorNjcN5oNw4ebPtBPSa4%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-1.discordapp.net/external/MYEUPcDNICLcadElV9-CZ92Ln62Lz2lMZGYRU5W7nEM/https/yt3.ggpht.com/mW5wMvGMt5jP0OZ2QGQxNk6x_iIGf4EY0H7Vkxh8Cz6U-x_3uln1_iiorNjcN5oNw4ebPtBPSa4%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 05:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553214652743681" id="message-863553214652743681" title="Message sent: 10-Jul-21 05:52 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to angelnonosiyt HP!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 05:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553457078927391" id="message-863553457078927391" title="Message sent: 10-Jul-21 05:53 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UCeAFNuvwUWY_lDgZNwp7QSQ">https://www.youtube.com/channel/UCeAFNuvwUWY_lDgZNwp7QSQ</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCeAFNuvwUWY_lDgZNwp7QSQ">
+                                                    <div class="markdown preserve-whitespace">Maneboom</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Taco Bell? o KFC?</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/bbBBI7MdmWdqGzUNXsBgaEaaPCZ6A-tQymiMZiGIgeo/https/yt3.ggpht.com/ytc/AKedOLRCY-4fKJrnHB6VbWvNIDQs7QXtlU2hEM3ZwmkB%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/bbBBI7MdmWdqGzUNXsBgaEaaPCZ6A-tQymiMZiGIgeo/https/yt3.ggpht.com/ytc/AKedOLRCY-4fKJrnHB6VbWvNIDQs7QXtlU2hEM3ZwmkB%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 05:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553460690223114" id="message-863553460690223114" title="Message sent: 10-Jul-21 05:53 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to Maneboom!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 05:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553725233889282" id="message-863553725233889282" title="Message sent: 10-Jul-21 05:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add<a href="https://www.youtube.com/channel/UCf9IzZKrTgkIGoh64axndGA">https://www.youtube.com/channel/UCf9IzZKrTgkIGoh64axndGA</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCf9IzZKrTgkIGoh64axndGA">
+                                                    <div class="markdown preserve-whitespace">TheStyxZen</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Mi Discord de Mi Clan de Ethereum Anarchy : <a href="https://discord.gg/EtAZU7V6ga">https://discord.gg/EtAZU7V6ga</a></div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/o67Xq3JnTCP7l1yjkoOlobHJTmuYlnmFIb7h1zgUxno/https/yt3.ggpht.com/ytc/AKedOLQ5tnP8wvRXm3kPyAP5Xb-34Zi_IsUAyadchs024Q%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/o67Xq3JnTCP7l1yjkoOlobHJTmuYlnmFIb7h1zgUxno/https/yt3.ggpht.com/ytc/AKedOLQ5tnP8wvRXm3kPyAP5Xb-34Zi_IsUAyadchs024Q%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 05:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553726580391936" id="message-863553726580391936" title="Message sent: 10-Jul-21 05:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Interactive setup comming soon. For now please read the help below.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="863553728006979604" id="message-863553728006979604" title="Message sent: 10-Jul-21 05:54 PM">
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(229,72,55,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+                                                <img class="chatlog__embed-author-icon" src="https://images-ext-1.discordapp.net/external/ukQR5LhnF_haCWsuCNHfqSges8Zm3Pbjccr0KdgIE4E/%3Fsize%3D128/https/cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png" alt="Author icon" loading="lazy" onerror="this.style.visibility='hidden'">
+
+                                                <span class="chatlog__embed-author-name">
+Notifier                                                </span>
+                                        </div>
+
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">All commands listed here are to be prefixed with <span class="pre pre--inline">yt notifier</span> or <span class="pre pre--inline">yt notify</span>
+Example: <span class="pre pre--inline">yt notifier list</span> or <span class="pre pre--inline">yt notify list</span></div>
+                                        </div>
+
+                                        <div class="chatlog__embed-fields">
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">add &lt;Youtube channel&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Subscribes to Youtube channel in the current Discord channel
+<strong>Note</strong>: Custom urls may not always work, if possible please use the url with the channel Id instead.</div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">formatlive &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets notification message for livestreams in this server.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">format &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets notification message in this server.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">formatchannel &lt;youtube channel URL&gt; &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets notification message for the channel provided.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">formatchannellive &lt;youtube channel URL&gt; &lt;message / reset&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sets livestream notification message for the channel provided.
+Placeholders: <span class="pre pre--inline">{channel}</span>, <span class="pre pre--inline">{title}</span>, <span class="pre pre--inline">{url}</span>, <span class="pre pre--inline">{url-long}</span> &amp; <span class="pre pre--inline">{type}</span></div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">list</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Shows all the subscribed to Youtube channels in the server.</div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">remove &lt;Youtube channel / all&gt;</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Unsubscribe from Youtube channel in the current Discord channel or all Youtube channels in the server.
+<strong>Note</strong>: Custom urls may not always work, if possible please use the url with the channel Id instead.</div>
+                                                        </div>
+                                                </div>
+                                                <div class="chatlog__embed-field ">
+                                                        <div class="chatlog__embed-field-name">
+                                                            <div class="markdown preserve-whitespace">test</div>
+                                                        </div>
+
+                                                        <div class="chatlog__embed-field-value">
+                                                            <div class="markdown preserve-whitespace">Sends a test upload notification in your current Discord channel.</div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="863553729097498635" id="message-863553729097498635" title="Message sent: 10-Jul-21 05:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">For quick setup please run the following commands in the text channel where u want your notifications to be sent (without the &lt; &gt;).To add a channel run <span class="pre pre--inline">yt notifier add &lt;CHANNEL URL HERE&gt;</span>. If you wish to change the message sent in the notification use <span class="pre pre--inline">yt notifier format &lt;THE MESSAGE YOU WANT TO SAY&gt;</span>, the placeholders can be found in the message above</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 05:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553783900274698" id="message-863553783900274698" title="Message sent: 10-Jul-21 05:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UCf9IzZKrTgkIGoh64axndGA">https://www.youtube.com/channel/UCf9IzZKrTgkIGoh64axndGA</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCf9IzZKrTgkIGoh64axndGA">
+                                                    <div class="markdown preserve-whitespace">TheStyxZen</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Mi Discord de Mi Clan de Ethereum Anarchy : <a href="https://discord.gg/EtAZU7V6ga">https://discord.gg/EtAZU7V6ga</a></div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/o67Xq3JnTCP7l1yjkoOlobHJTmuYlnmFIb7h1zgUxno/https/yt3.ggpht.com/ytc/AKedOLQ5tnP8wvRXm3kPyAP5Xb-34Zi_IsUAyadchs024Q%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/o67Xq3JnTCP7l1yjkoOlobHJTmuYlnmFIb7h1zgUxno/https/yt3.ggpht.com/ytc/AKedOLQ5tnP8wvRXm3kPyAP5Xb-34Zi_IsUAyadchs024Q%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 05:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="863553787632418836" id="message-863553787632418836" title="Message sent: 10-Jul-21 05:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to TheStyxZen!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 05:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="863554816877789194" id="message-863554816877789194" title="Message sent: 10-Jul-21 05:58 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UCQomusevq6rS5nM0RovLROw">https://www.youtube.com/channel/UCQomusevq6rS5nM0RovLROw</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCQomusevq6rS5nM0RovLROw">
+                                                    <div class="markdown preserve-whitespace">Lodrial MC</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Suscribanse y activen la campanita si les gusta este hermosisimo cana</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/Tcb7dsoDiWE-hGIpE4Y2uL4cmnKuzKQbb6PDFZAHVso/https/yt3.ggpht.com/ytc/AKedOLS3_i4w6qGdJ9xKNrlVS3jrgtMKEvcg_g6UBfkC5Q%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/Tcb7dsoDiWE-hGIpE4Y2uL4cmnKuzKQbb6PDFZAHVso/https/yt3.ggpht.com/ytc/AKedOLS3_i4w6qGdJ9xKNrlVS3jrgtMKEvcg_g6UBfkC5Q%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 05:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="863554819339845642" id="message-863554819339845642" title="Message sent: 10-Jul-21 05:58 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to Lodrial MC!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Jul-21 06:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="863555532203884544" id="message-863555532203884544" title="Message sent: 10-Jul-21 06:01 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UCkjuA3jJkmQa7o5O6BZYt5g">https://www.youtube.com/channel/UCkjuA3jJkmQa7o5O6BZYt5g</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCkjuA3jJkmQa7o5O6BZYt5g">
+                                                    <div class="markdown preserve-whitespace">Bee&#39;s Fan</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Hola soy bees! Juego Minecraft y Friday Night Funkin&#39;. Me gusta aprender cosas nuevas y me encanta la historia de servidores de Minecraft como 2b2t o Hisparquia.</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-1.discordapp.net/external/c7gFLqbn-hM76yRDibVy3Bb3-53S_0ERbWbAViJZ5Zk/https/yt3.ggpht.com/ytc/AKedOLQ3ARh-9sgGyGFwTEi_3jF1xLjIpaux4vLeMKqU%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-1.discordapp.net/external/c7gFLqbn-hM76yRDibVy3Bb3-53S_0ERbWbAViJZ5Zk/https/yt3.ggpht.com/ytc/AKedOLQ3ARh-9sgGyGFwTEi_3jF1xLjIpaux4vLeMKqU%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Jul-21 06:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="863555535536914452" id="message-863555535536914452" title="Message sent: 10-Jul-21 06:01 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to Bee&#39;s Fan!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">11-Jul-21 11:21 AM</span>
+
+            <div class="chatlog__message " data-message-id="863817199092498452" id="message-863817199092498452" title="Message sent: 11-Jul-21 11:21 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> Maneboom ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/wfVRQcVMUNA">https://youtu.be/wfVRQcVMUNA</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCeAFNuvwUWY_lDgZNwp7QSQ">Maneboom</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=wfVRQcVMUNA">
+                                                    <div class="markdown preserve-whitespace">Filtered base coordinates || hisparquia.org</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/wfVRQcVMUNA" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">18-Jul-21 04:38 AM</span>
+
+            <div class="chatlog__message " data-message-id="866252572964421672" id="message-866252572964421672" title="Message sent: 18-Jul-21 04:38 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> angelnonosiyt HP ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/6iu0EgBMIrE">https://youtu.be/6iu0EgBMIrE</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC-RznkMqItgMDstC9wdHlJQ">angelnonosiyt HP</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=6iu0EgBMIrE">
+                                                    <div class="markdown preserve-whitespace">torneo el piso es lava</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/6iu0EgBMIrE" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">19-Jul-21 04:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="866794799789113364" id="message-866794799789113364" title="Message sent: 19-Jul-21 04:33 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> angelnonosiyt HP ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/lN-G0QYpDeI">https://youtu.be/lN-G0QYpDeI</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC-RznkMqItgMDstC9wdHlJQ">angelnonosiyt HP</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=lN-G0QYpDeI">
+                                                    <div class="markdown preserve-whitespace">permadeaht demons</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/lN-G0QYpDeI" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/756305046316253264/93b2bdd145179d8de59cf945499bc487.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ⱥm℘yτo#0234" data-user-id="756305046316253264" style="color: rgb(17,128,106)">尽其所能地将你的悲惨的屁股</span>
+
+
+        <span class="chatlog__timestamp">05-Aug-21 03:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="872937958498533446" id="message-872937958498533446" title="Message sent: 05-Aug-21 03:23 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><a href="https://www.youtube.com/watch?v=C4SBSrZx0uE">https://www.youtube.com/watch?v=C4SBSrZx0uE</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC1lawm5gnAf6-EsjOd2QsZw">Tater HD</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=C4SBSrZx0uE">
+                                                    <div class="markdown preserve-whitespace">Low tps on wendigo server  (bigger anarchy ) :/ MEME</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/C4SBSrZx0uE" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">05-Aug-21 05:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="872964655180562453" id="message-872964655180562453" title="Message sent: 05-Aug-21 05:09 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">lol</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <img class="chatlog__reference-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+                <span class="chatlog__reference-name" title="Gabriel0601#4479" style="color: rgb(241,196,15)">「King亗NICE</span>
+                <div class="chatlog__reference-content">
+                    <span class="chatlog__reference-link" onclick="scrollToMessage(event, &#39;872964655180562453&#39;)">
+lol                    </span>
+
+                </div>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/756305046316253264/93b2bdd145179d8de59cf945499bc487.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ⱥm℘yτo#0234" data-user-id="756305046316253264" style="color: rgb(17,128,106)">尽其所能地将你的悲惨的屁股</span>
+
+
+        <span class="chatlog__timestamp">05-Aug-21 05:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="872964982285930567" id="message-872964982285930567" title="Message sent: 05-Aug-21 05:11 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">todos lo derechos son de <span class="mention" title="pipapiu#5688">@pipapiu</span>  es gracias a el</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="872965014410129489" id="message-872965014410129489" title="Message sent: 05-Aug-21 05:11 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">es su canal</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808" style="">Deleted User</span>
+
+
+        <span class="chatlog__timestamp">07-Aug-21 10:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="873774798856142869" id="message-873774798856142869" title="Message sent: 07-Aug-21 10:49 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://youtube.com/channel/UCQomusevq6rS5nM0RovLROw">https://youtube.com/channel/UCQomusevq6rS5nM0RovLROw</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://youtube.com/channel/UCQomusevq6rS5nM0RovLROw">
+                                                    <div class="markdown preserve-whitespace">Lodrial MC</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Suscribanse y activen la campanita si les gusta este hermosisimo cana</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/Tcb7dsoDiWE-hGIpE4Y2uL4cmnKuzKQbb6PDFZAHVso/https/yt3.ggpht.com/ytc/AKedOLS3_i4w6qGdJ9xKNrlVS3jrgtMKEvcg_g6UBfkC5Q%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/Tcb7dsoDiWE-hGIpE4Y2uL4cmnKuzKQbb6PDFZAHVso/https/yt3.ggpht.com/ytc/AKedOLS3_i4w6qGdJ9xKNrlVS3jrgtMKEvcg_g6UBfkC5Q%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">07-Aug-21 10:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="873774799707602955" id="message-873774799707602955" title="Message sent: 07-Aug-21 10:49 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">You need manageGuild permissions to do this.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Deleted User#0000" data-user-id="456226577798135808" style="">Deleted User</span>
+
+
+        <span class="chatlog__timestamp">07-Aug-21 10:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="873774839805149275" id="message-873774839805149275" title="Message sent: 07-Aug-21 10:49 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Ah f</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="873774888362590209" id="message-873774888362590209" title="Message sent: 07-Aug-21 10:49 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Justo iva a volver a activar mi canal xd</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="873774955458854973" id="message-873774955458854973" title="Message sent: 07-Aug-21 10:49 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention" title="Gabriel0601#4479">@「King亗NICE</span></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="873775005262041088" id="message-873775005262041088" title="Message sent: 07-Aug-21 10:49 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">A&#241;ades las notificaciones de mi canal?</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="873775051743318086" id="message-873775051743318086" title="Message sent: 07-Aug-21 10:50 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Lo volvere a activar desde ma&#241;ana</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/756305046316253264/93b2bdd145179d8de59cf945499bc487.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ⱥm℘yτo#0234" data-user-id="756305046316253264" style="color: rgb(17,128,106)">尽其所能地将你的悲惨的屁股</span>
+
+
+        <span class="chatlog__timestamp">08-Aug-21 11:17 AM</span>
+
+            <div class="chatlog__message " data-message-id="873963190336241735" id="message-873963190336241735" title="Message sent: 08-Aug-21 11:17 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UC5WI0pCbKHng1RA7n1PnE-w">https://www.youtube.com/channel/UC5WI0pCbKHng1RA7n1PnE-w</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UC5WI0pCbKHng1RA7n1PnE-w">
+                                                    <div class="markdown preserve-whitespace">EDgamer138</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">hola q tal en este canal encontraras 
+minecraft de todo tipo ,misterios ,etc 
+
+
+posta  <span class="spoiler-text spoiler-text--hidden" onclick="showSpoiler(event, this)"> suscrinbete </span></div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-1.discordapp.net/external/3984QYZG2P6_7L2F6JAHQPmDDnvY0o-MlGoxnoB9MpU/https/yt3.ggpht.com/ytc/AKedOLS_SUkh-MJUUP7GGnSsBodyCUQvO6vjmDM4_U31%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-1.discordapp.net/external/3984QYZG2P6_7L2F6JAHQPmDDnvY0o-MlGoxnoB9MpU/https/yt3.ggpht.com/ytc/AKedOLS_SUkh-MJUUP7GGnSsBodyCUQvO6vjmDM4_U31%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">10-Aug-21 11:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="874870374590988328" id="message-874870374590988328" title="Message sent: 10-Aug-21 11:22 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://youtube.com/channel/UCQomusevq6rS5nM0RovLROw">https://youtube.com/channel/UCQomusevq6rS5nM0RovLROw</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://youtube.com/channel/UCQomusevq6rS5nM0RovLROw">
+                                                    <div class="markdown preserve-whitespace">Lodrial MC</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Suscribanse y activen la campanita si les gusta este hermosisimo cana</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/Tcb7dsoDiWE-hGIpE4Y2uL4cmnKuzKQbb6PDFZAHVso/https/yt3.ggpht.com/ytc/AKedOLS3_i4w6qGdJ9xKNrlVS3jrgtMKEvcg_g6UBfkC5Q%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/Tcb7dsoDiWE-hGIpE4Y2uL4cmnKuzKQbb6PDFZAHVso/https/yt3.ggpht.com/ytc/AKedOLS3_i4w6qGdJ9xKNrlVS3jrgtMKEvcg_g6UBfkC5Q%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Aug-21 11:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="874870376591667201" id="message-874870376591667201" title="Message sent: 10-Aug-21 11:22 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">You are already watching this channel.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">13-Aug-21 03:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="875833643371741194" id="message-875833643371741194" title="Message sent: 13-Aug-21 03:10 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> Bee&#39;s Fan ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/FIYJ8smbFtw">https://youtu.be/FIYJ8smbFtw</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCkjuA3jJkmQa7o5O6BZYt5g">Bee&#39;s Fan</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=FIYJ8smbFtw">
+                                                    <div class="markdown preserve-whitespace">La Historia de Imperium Latam / The Big One</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/FIYJ8smbFtw" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction" title="840189561325486099">
+                                <img class="emoji emoji--small" alt="840189561325486099" src="https://cdn.discordapp.com/emojis/849162049404796938.gif" loading="lazy">
+                                <span class="chatlog__reaction-count">5</span>
+                            </div>
+                            <div class="chatlog__reaction" title="netheritesword">
+                                <img class="emoji emoji--small" alt="netheritesword" src="https://cdn.discordapp.com/emojis/861601852729589780.png" loading="lazy">
+                                <span class="chatlog__reaction-count">4</span>
+                            </div>
+                            <div class="chatlog__reaction" title="netherite_pickaxe">
+                                <img class="emoji emoji--small" alt="netherite_pickaxe" src="https://cdn.discordapp.com/emojis/861601853079158814.png" loading="lazy">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction" title="6432_Enchanted_netherite_pickaxe">
+                                <img class="emoji emoji--small" alt="6432_Enchanted_netherite_pickaxe" src="https://cdn.discordapp.com/emojis/847961727404605450.gif" loading="lazy">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction" title="Enchanted_netherite_hoe">
+                                <img class="emoji emoji--small" alt="Enchanted_netherite_hoe" src="https://cdn.discordapp.com/emojis/847961726846894100.gif" loading="lazy">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction" title="hacha_de_netherita">
+                                <img class="emoji emoji--small" alt="hacha_de_netherita" src="https://cdn.discordapp.com/emojis/802964318773182555.png" loading="lazy">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction" title="minecraftwither">
+                                <img class="emoji emoji--small" alt="minecraftwither" src="https://cdn.discordapp.com/emojis/861601851744845825.png" loading="lazy">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/703678331132051589/80402ea3a2f50737793ac14ee2389097.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Leo_342#0382" data-user-id="703678331132051589" style="">Leo_342</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-21 03:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="875833685692272701" id="message-875833685692272701" title="Message sent: 13-Aug-21 03:10 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">:0</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="875833784338100284" id="message-875833784338100284" title="Message sent: 13-Aug-21 03:10 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">se estrena en 19 min</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="875833788666642512" id="message-875833788666642512" title="Message sent: 13-Aug-21 03:10 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">xd</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">13-Aug-21 08:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="875909379080216577" id="message-875909379080216577" title="Message sent: 13-Aug-21 08:11 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> Maneboom ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/qAF5V8MkUoM">https://youtu.be/qAF5V8MkUoM</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCeAFNuvwUWY_lDgZNwp7QSQ">Maneboom</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=qAF5V8MkUoM">
+                                                    <div class="markdown preserve-whitespace">Bed Traping Newfag</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/qAF5V8MkUoM" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">20-Aug-21 10:47 AM</span>
+
+            <div class="chatlog__message " data-message-id="878304356523454554" id="message-878304356523454554" title="Message sent: 20-Aug-21 10:47 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> angelnonosiyt HP ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/OMIt5RNNbPs">https://youtu.be/OMIt5RNNbPs</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC-RznkMqItgMDstC9wdHlJQ">angelnonosiyt HP</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=OMIt5RNNbPs">
+                                                    <div class="markdown preserve-whitespace">jugando ARENA ()</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/OMIt5RNNbPs" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">22-Aug-21 08:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="879169280380379187" id="message-879169280380379187" title="Message sent: 22-Aug-21 08:04 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UCXlPCm2e34KfXwe4CD0Tagg">https://www.youtube.com/channel/UCXlPCm2e34KfXwe4CD0Tagg</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCXlPCm2e34KfXwe4CD0Tagg">
+                                                    <div class="markdown preserve-whitespace">Imperium Latam</div>
+                                                </a>
+                                        </div>
+
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/dY92-dsJgiaqw-RJ764IMXuWFMrLYuZObcsRaN6j6mc/https/yt3.ggpht.com/15mJZJB4ZVetd1_7BP-2F5CMDa4hIzxF_xYNGsSbJHgbUXVZj4tRbL_FvJaqi5QL0nMwiu08eQ%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/dY92-dsJgiaqw-RJ764IMXuWFMrLYuZObcsRaN6j6mc/https/yt3.ggpht.com/15mJZJB4ZVetd1_7BP-2F5CMDa4hIzxF_xYNGsSbJHgbUXVZj4tRbL_FvJaqi5QL0nMwiu08eQ%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">22-Aug-21 08:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="879169283610001429" id="message-879169283610001429" title="Message sent: 22-Aug-21 08:04 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to Imperium Latam!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">23-Aug-21 11:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="879395617355485254" id="message-879395617355485254" title="Message sent: 23-Aug-21 11:04 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> Imperium Latam ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/ZaqRv2j1srU">https://youtu.be/ZaqRv2j1srU</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCXlPCm2e34KfXwe4CD0Tagg">Imperium Latam</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=ZaqRv2j1srU">
+                                                    <div class="markdown preserve-whitespace">Imperium Latam Montage Epic #1</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/ZaqRv2j1srU" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">23-Aug-21 02:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="879453352474341387" id="message-879453352474341387" title="Message sent: 23-Aug-21 02:53 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UCM2Z3esm0tQqc5Jyorb58ag">https://www.youtube.com/channel/UCM2Z3esm0tQqc5Jyorb58ag</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCM2Z3esm0tQqc5Jyorb58ag">
+                                                    <div class="markdown preserve-whitespace">ImPerialGmr</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">las perdidas son duras pero hay que superarlas.</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/TJ9A-AitxIb6ROs-Hz30Hlf4u8spEO_-zW9rJ92Ll78/https/yt3.ggpht.com/ytc/AKedOLToXxdi307sd4dsgmktA4Oo25SitgKSxXaC7QCxlA%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/TJ9A-AitxIb6ROs-Hz30Hlf4u8spEO_-zW9rJ92Ll78/https/yt3.ggpht.com/ytc/AKedOLToXxdi307sd4dsgmktA4Oo25SitgKSxXaC7QCxlA%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">23-Aug-21 02:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="879453355389370458" id="message-879453355389370458" title="Message sent: 23-Aug-21 02:53 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to ImPerialGmr!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">23-Aug-21 02:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="879453493235159081" id="message-879453493235159081" title="Message sent: 23-Aug-21 02:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UC27QmhaLX53cQwIkV4Ebq9A/featured">https://www.youtube.com/channel/UC27QmhaLX53cQwIkV4Ebq9A/featured</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UC27QmhaLX53cQwIkV4Ebq9A/featured">
+                                                    <div class="markdown preserve-whitespace">_Ravenzzz</div>
+                                                </a>
+                                        </div>
+
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/SInPrBzpvUHdSryHNt1gcDY1tQVugQJuadgMy2pxG-Y/https/yt3.ggpht.com/Ti-mA6yThvpBRBZDSqSNlsjJF3dpHvl01FEQ1UJsW_aorN-SkLpenZoxJ06ijkepWVUZpksX6A%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/SInPrBzpvUHdSryHNt1gcDY1tQVugQJuadgMy2pxG-Y/https/yt3.ggpht.com/Ti-mA6yThvpBRBZDSqSNlsjJF3dpHvl01FEQ1UJsW_aorN-SkLpenZoxJ06ijkepWVUZpksX6A%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">23-Aug-21 02:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="879453498796826626" id="message-879453498796826626" title="Message sent: 23-Aug-21 02:54 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to _Ravenzzz!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">23-Aug-21 04:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="879485088239325214" id="message-879485088239325214" title="Message sent: 23-Aug-21 04:59 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><a href="https://youtu.be/qJ1_ir9tzB4">https://youtu.be/qJ1_ir9tzB4</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCM2Z3esm0tQqc5Jyorb58ag">ImPerialGmr</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=qJ1_ir9tzB4">
+                                                    <div class="markdown preserve-whitespace">Cpvp/Crystalpvp montage , Turok+ on top. 420p</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/qJ1_ir9tzB4" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="879485132472467488" id="message-879485132472467488" title="Message sent: 23-Aug-21 04:59 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="879485195819049041" id="message-879485195819049041" title="Message sent: 23-Aug-21 05:00 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><a href="https://youtu.be/pK8dCEq8qyY">https://youtu.be/pK8dCEq8qyY</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC27QmhaLX53cQwIkV4Ebq9A">_Ravenzzz</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=pK8dCEq8qyY">
+                                                    <div class="markdown preserve-whitespace">A montage of a little raven (crystal pvp)</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/pK8dCEq8qyY" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">24-Aug-21 12:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="879779719707500574" id="message-879779719707500574" title="Message sent: 24-Aug-21 12:30 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw">https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw">
+                                                    <div class="markdown preserve-whitespace">ImLay_</div>
+                                                </a>
+                                        </div>
+
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/LvQsprLCP_RSpTDLsYZnmx34DS84WyOFR-lPlV3swFs/https/yt3.ggpht.com/V6PVQbidsJ-6KMm8bsXJDOlNBagQ4IvKJtWwvCnbI8vspWZPh6r3kUd-MZQqI4Zoj1tEmq3tTw%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/LvQsprLCP_RSpTDLsYZnmx34DS84WyOFR-lPlV3swFs/https/yt3.ggpht.com/V6PVQbidsJ-6KMm8bsXJDOlNBagQ4IvKJtWwvCnbI8vspWZPh6r3kUd-MZQqI4Zoj1tEmq3tTw%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">24-Aug-21 12:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="879779724958769184" id="message-879779724958769184" title="Message sent: 24-Aug-21 12:30 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Too many channels subbed on this server. Maximum 10.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">24-Aug-21 01:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="879788257905352726" id="message-879788257905352726" title="Message sent: 24-Aug-21 01:04 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><a href="https://www.youtube.com/watch?v=NNZL13q6lmk">https://www.youtube.com/watch?v=NNZL13q6lmk</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw">ImLay_</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=NNZL13q6lmk">
+                                                    <div class="markdown preserve-whitespace">Montage Crystal Pvp xd</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/NNZL13q6lmk" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="879788275034910750" id="message-879788275034910750" title="Message sent: 24-Aug-21 01:04 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span></span>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction" title="8934_Pepe_King">
+                                <img class="emoji emoji--small" alt="8934_Pepe_King" src="https://cdn.discordapp.com/emojis/840168707937402952.png" loading="lazy">
+                                <span class="chatlog__reaction-count">4</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="879788289958244362" id="message-879788289958244362" title="Message sent: 24-Aug-21 01:04 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">izi</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">24-Aug-21 10:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="879933454756757525" id="message-879933454756757525" title="Message sent: 24-Aug-21 10:41 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><a href="https://youtu.be/yyudnjlkeY4">https://youtu.be/yyudnjlkeY4</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw">ImLay_</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=yyudnjlkeY4">
+                                                    <div class="markdown preserve-whitespace">pablo :u</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/yyudnjlkeY4" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-21 01:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="880154146517438504" id="message-880154146517438504" title="Message sent: 25-Aug-21 01:18 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> ImLay_ ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/Y9TnH1AJzF0">https://youtu.be/Y9TnH1AJzF0</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw">ImLay_</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=Y9TnH1AJzF0">
+                                                    <div class="markdown preserve-whitespace">el patito juan</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/Y9TnH1AJzF0" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">02-Sep-21 09:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="883180185682329620" id="message-883180185682329620" title="Message sent: 02-Sep-21 09:42 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> Imperium Latam ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/g073aHpN0h4">https://youtu.be/g073aHpN0h4</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCXlPCm2e34KfXwe4CD0Tagg">Imperium Latam</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=g073aHpN0h4">
+                                                    <div class="markdown preserve-whitespace">Proyecto sin t&#237;tulo</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/g073aHpN0h4" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">06-Sep-21 11:28 AM</span>
+
+            <div class="chatlog__message " data-message-id="884475172051120199" id="message-884475172051120199" title="Message sent: 06-Sep-21 11:28 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UC3VS3BI4biloxB-JnPQ7HoQ/videos">https://www.youtube.com/channel/UC3VS3BI4biloxB-JnPQ7HoQ/videos</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UC3VS3BI4biloxB-JnPQ7HoQ/videos">
+                                                    <div class="markdown preserve-whitespace">casoulxd</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown preserve-whitespace">Hola, me gusta jugar servidores anarquicos y 1.8 , si me quieres contactar a&#241;ademe en discord <img loading="lazy" class="emoji " alt="𝕟" title="𝕟" src="https://twemoji.maxcdn.com/2/svg/1d55f.svg"><img loading="lazy" class="emoji " alt="𝕠" title="𝕠" src="https://twemoji.maxcdn.com/2/svg/1d560.svg"><img loading="lazy" class="emoji " alt="𝕥" title="𝕥" src="https://twemoji.maxcdn.com/2/svg/1d565.svg"><img loading="lazy" class="emoji " alt="𝕒" title="𝕒" src="https://twemoji.maxcdn.com/2/svg/1d552.svg"><img loading="lazy" class="emoji " alt="𝕝" title="𝕝" src="https://twemoji.maxcdn.com/2/svg/1d55d.svg"><img loading="lazy" class="emoji " alt="𝕜" title="𝕜" src="https://twemoji.maxcdn.com/2/svg/1d55c.svg">#0001</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-1.discordapp.net/external/yffouTJ16nufuUYSzzwKfG4X7lddY651zvIpE34BsYQ/https/yt3.ggpht.com/EwksBWUeIJQAs5ybkm8unNeTjfDVNXdAk19qyoJKFv8UiuTMJJk_ou2mBbMaqxiLniMyT0Wxug%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-1.discordapp.net/external/yffouTJ16nufuUYSzzwKfG4X7lddY651zvIpE34BsYQ/https/yt3.ggpht.com/EwksBWUeIJQAs5ybkm8unNeTjfDVNXdAk19qyoJKFv8UiuTMJJk_ou2mBbMaqxiLniMyT0Wxug%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction" title="hot_face">
+                                <img class="emoji emoji--small" alt="&#129397;" src="https://twemoji.maxcdn.com/2/svg/1f975.svg" loading="lazy">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">06-Sep-21 11:28 AM</span>
+
+            <div class="chatlog__message " data-message-id="884475174655766578" id="message-884475174655766578" title="Message sent: 06-Sep-21 11:28 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to casoulxd!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">07-Sep-21 09:01 AM</span>
+
+            <div class="chatlog__message " data-message-id="884800617414025236" id="message-884800617414025236" title="Message sent: 07-Sep-21 09:01 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yt notifier add <a href="https://www.youtube.com/channel/UC3ij8QheGatBrlxSf59-mIw">https://www.youtube.com/channel/UC3ij8QheGatBrlxSf59-mIw</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/channel/UC3ij8QheGatBrlxSf59-mIw">
+                                                    <div class="markdown preserve-whitespace">Skirtzzz</div>
+                                                </a>
+                                        </div>
+
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://images-ext-2.discordapp.net/external/f0RAiqAwjvADKGl76Z9ZNCfzsD4fNg_35taZMs_K3BY/https/yt3.ggpht.com/ytc/AKedOLThDwNIlm63DTgzUhqbrRWe47iRE4lr8VrwEdbN%3Ds900-c-k-c0x00ffffff-no-rj">
+                                            <img class="chatlog__embed-thumbnail" src="https://images-ext-2.discordapp.net/external/f0RAiqAwjvADKGl76Z9ZNCfzsD4fNg_35taZMs_K3BY/https/yt3.ggpht.com/ytc/AKedOLThDwNIlm63DTgzUhqbrRWe47iRE4lr8VrwEdbN%3Ds900-c-k-c0x00ffffff-no-rj" alt="Thumbnail" loading="lazy">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">07-Sep-21 09:01 AM</span>
+
+            <div class="chatlog__message " data-message-id="884800620228395008" id="message-884800620228395008" title="Message sent: 07-Sep-21 09:01 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Successfully subscribed to Skirtzzz!
+This channel will now receive messages about their uploads.</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">08-Sep-21 01:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="885226638269370418" id="message-885226638269370418" title="Message sent: 08-Sep-21 01:14 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">]<a href="https://youtu.be/qVCcAX2lad0">https://youtu.be/qVCcAX2lad0</a> <span class="mention">@everyone</span> <img loading="lazy" class="emoji " alt="🥵" title="hot_face" src="https://twemoji.maxcdn.com/2/svg/1f975.svg"></span>
+
+                                <span class="chatlog__edited-timestamp" title="08-Sep-21 01:14 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC3ij8QheGatBrlxSf59-mIw">Skirtzzz</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=qVCcAX2lad0">
+                                                    <div class="markdown preserve-whitespace">Why? ft. Zero</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/qVCcAX2lad0" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">09-Sep-21 02:22 AM</span>
+
+            <div class="chatlog__message " data-message-id="885424906089668608" id="message-885424906089668608" title="Message sent: 09-Sep-21 02:22 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> casoulxd ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/rfN7p0SryMM">https://youtu.be/rfN7p0SryMM</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC3VS3BI4biloxB-JnPQ7HoQ">casoulxd</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=rfN7p0SryMM">
+                                                    <div class="markdown preserve-whitespace">ChopIdraTage - El pepe Y ete sech cpvpers</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/rfN7p0SryMM" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">10-Sep-21 11:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="886099266597158912" id="message-886099266597158912" title="Message sent: 10-Sep-21 11:02 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> Skirtzzz ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/1ngDSmkhQ2E">https://youtu.be/1ngDSmkhQ2E</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC3ij8QheGatBrlxSf59-mIw">Skirtzzz</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=1ngDSmkhQ2E">
+                                                    <div class="markdown preserve-whitespace">Lynxtage</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/1ngDSmkhQ2E" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">11-Sep-21 12:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="886115010026274846" id="message-886115010026274846" title="Message sent: 11-Sep-21 12:04 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> ImLay_ ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/VpRZd4nQx0o">https://youtu.be/VpRZd4nQx0o</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw">ImLay_</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=VpRZd4nQx0o">
+                                                    <div class="markdown preserve-whitespace">Crystal PvP|I.L|xd</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/VpRZd4nQx0o" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">11-Sep-21 01:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="886321680765558796" id="message-886321680765558796" title="Message sent: 11-Sep-21 01:45 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> ElBasureroDeImperiumLatam ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/ncB_uEmBsSA">https://youtu.be/ncB_uEmBsSA</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCxgzJPpYwAe3P7dFBh_a5Yw">ElBasureroDeImperiumLatam</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=ncB_uEmBsSA">
+                                                    <div class="markdown preserve-whitespace">CrystalPvPv2 |ft adriano...</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/ncB_uEmBsSA" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">11-Sep-21 05:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="886374454609981451" id="message-886374454609981451" title="Message sent: 11-Sep-21 05:15 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> Imperium Latam ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/JzvVJWp5Fls">https://youtu.be/JzvVJWp5Fls</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCXlPCm2e34KfXwe4CD0Tagg">Imperium Latam</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=JzvVJWp5Fls">
+                                                    <div class="markdown preserve-whitespace">Imperium leaders present montage #2 XD XD</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/JzvVJWp5Fls" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/456633518882160642/41eefaf9798a04e2a3353cfbd1f90e78.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="YouTube#7763" data-user-id="456633518882160642" style="color: rgb(73,76,73)">YouTube</span>
+
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">12-Sep-21 02:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="886507582481657916" id="message-886507582481657916" title="Message sent: 12-Sep-21 02:04 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span> casoulxd ha subido un nuevo v&#237;deo, ve a verlo <a href="https://youtu.be/qsm6BxfiiOk">https://youtu.be/qsm6BxfiiOk</a></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UC3VS3BI4biloxB-JnPQ7HoQ">casoulxd</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=qsm6BxfiiOk">
+                                                    <div class="markdown preserve-whitespace">HOW TO RENAME RAT</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-youtube-container">
+                                            <iframe class="chatlog__embed-youtube" src="https://www.youtube.com/embed/qsm6BxfiiOk" width="400" height="225"></iframe>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction" title="heavy_multiplication_x">
+                                <img class="emoji emoji--small" alt="✖️" src="https://twemoji.maxcdn.com/2/svg/2716.svg" loading="lazy">
+                                <span class="chatlog__reaction-count">8</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 72 message(s)</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,2315 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>&#119816;&#119846;&#119849;&#119838;&#119851;&#119842;&#119854;&#119846; &#119819;&#119834;&#119853;&#119834;&#119846;│&#119816;.&#119819; - ╢&#128217;╟❱&#120029;ick❰</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-300.woff);
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-400.woff);
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-500.woff);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-600.woff);
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/whitney-700.woff);
+            font-weight: 700;
+        }
+
+        body {
+            background-color: #36393e;
+            color: #dcddde;
+            font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        a {
+            color: #00aff4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            object-fit: contain;
+        }
+
+        .markdown {
+            max-width: 100%;
+            line-height: 1.3;
+            overflow-wrap: break-word;
+        }
+
+        .preserve-whitespace {
+            white-space: pre-wrap;
+        }
+
+        .spoiler-text {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .spoiler-text--hidden {
+            cursor: pointer;
+            background-color: #202225;
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .spoiler-text--hidden:hover {
+            background-color: rgba(32, 34, 37, 0.8);
+        }
+
+        .spoiler-text--hidden::selection {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .quote {
+            margin: 0.1em 0;
+            padding-left: 0.6em;
+            border-left: 4px solid #4f545c;
+            border-radius: 3px;
+        }
+
+        .pre {
+            background-color: #2f3136;
+            font-family: "Consolas", "Courier New", Courier, monospace;
+        }
+
+        .pre--multiline {
+            margin-top: 0.25em;
+            padding: 0.5em;
+            border: 2px solid #282b30;
+            border-radius: 5px;
+            color: #b9bbbe;
+        }
+
+        .pre--multiline.hljs {
+            background-color: #2f3136;
+            color: #b9bbbe;
+        }
+
+        .pre--inline {
+            padding: 2px;
+            border-radius: 3px;
+            font-size: 0.85em;
+        }
+
+        .mention {
+            border-radius: 3px;
+            padding: 0 2px;
+            color: #7289da;
+            background-color: rgba(114, 137, 218, .1);
+            font-weight: 500;
+        }
+
+        .timestamp {
+            border-radius: 3px;
+            padding: 0 2px;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .emoji {
+            width: 1.325em;
+            height: 1.325em;
+            margin: 0 0.06em;
+            vertical-align: -0.4em;
+        }
+
+        .emoji--small {
+            width: 1em;
+            height: 1em;
+        }
+
+        .emoji--large {
+            width: 2.8em;
+            height: 2.8em;
+        }
+
+        .preamble {
+            display: grid;
+            margin: 0 0.3em 0.6em 0.3em;
+            max-width: 100%;
+            grid-template-columns: auto 1fr;
+        }
+
+        .preamble__guild-icon-container {
+            grid-column: 1;
+        }
+
+        .preamble__guild-icon {
+            max-width: 88px;
+            max-height: 88px;
+        }
+
+        .preamble__entries-container {
+            grid-column: 2;
+            margin-left: 0.6em;
+        }
+
+        .preamble__entry {
+            font-size: 1.4em;
+            color: #ffffff;
+        }
+
+        .preamble__entry--small {
+            font-size: 1em;
+        }
+
+        .chatlog {
+            max-width: 100%;
+        }
+
+        .chatlog__message-group {
+            display: grid;
+            margin: 0 0.6em;
+            padding: 0.9em 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            grid-template-columns: auto 1fr;
+        }
+
+        .chatlog__reference-symbol {
+            grid-column: 1;
+            margin: 8px 4px 4px 18px;
+            border-left: 2px solid #4f545c;
+            border-top: 2px solid #4f545c;
+            border-radius: 8px 0 0 0;
+        }
+
+        .chatlog__reference {
+            display: flex;
+            grid-column: 2;
+            margin-bottom: 0.25em;
+            font-size: 0.875em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            align-items: center;
+            color: #b5b6b8;
+        }
+
+        .chatlog__reference-avatar {
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            margin-right: 0.25em;
+        }
+
+        .chatlog__reference-name {
+            margin-right: 0.25em;
+            font-weight: 600;
+        }
+
+        .chatlog__reference-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__reference-content a:hover {
+            text-decoration: none;
+        }
+
+        .chatlog__reference-link {
+            cursor: pointer;
+            color: #b5b6b8;
+        }
+
+        .chatlog__reference-link * {
+            display: inline;
+            pointer-events: none;
+        }
+
+        .chatlog__reference-link:hover {
+            color: #ffffff;
+        }
+
+        .chatlog__reference-link:hover *:not(.spoiler-text) {
+            color: #ffffff;
+        }
+
+        .chatlog__reference-edited-timestamp {
+            margin-left: 0.25em;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__author-avatar-container {
+            grid-column: 1;
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+        }
+
+        .chatlog__author-avatar {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .chatlog__messages {
+            grid-column: 2;
+            min-width: 50%;
+        }
+
+        .chatlog__author-name {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chatlog__timestamp {
+            margin-left: 0.3em;
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__message {
+            padding: 0.1em 0.3em;
+            margin: 0 -0.3em;
+            background-color: transparent;
+            transition: background-color 1s ease;
+        }
+
+        .chatlog__message--highlighted {
+            background-color: rgba(114, 137, 218, 0.2);
+        }
+
+        .chatlog__message--pinned {
+            background-color: rgba(249, 168, 37, 0.05);
+        }
+
+        .chatlog__content {
+            font-size: 0.95em;
+            word-wrap: break-word;
+        }
+
+        .chatlog__edited-timestamp {
+            margin-left: 0.15em;
+            font-size: 0.8em;
+        }
+
+        .chatlog__attachment {
+            display: inline-block;
+            position: relative;
+            margin-top: 0.3em;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden {
+            cursor: pointer;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .chatlog__attachment--hidden * {
+            pointer-events: none;
+        }
+
+        .chatlog__attachment-spoiler-caption {
+            display: none;
+            z-index: 999;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0.4em 0.8em;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 20px;
+            color: #dcddde;
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-spoiler-caption {
+            display: block;
+        }
+
+        .chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption {
+            color: #fff;
+        }
+
+        .chatlog__attachment-media {
+            vertical-align: top;
+            max-width: 45vw;
+            max-height: 500px;
+            border-radius: 3px;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-media {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic {
+            width: 100%;
+            max-width: 520px;
+            height: 40px;
+            padding: 10px;
+            background-color: #2f3136;
+            border: 1px solid #292b2f;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .chatlog__attachment--hidden .chatlog__attachment-generic {
+            filter: blur(44px);
+        }
+
+        .chatlog__attachment-generic-icon {
+            float: left;
+            width: 30px;
+            height: 100%;
+            margin-right: 10px;
+        }
+
+        .chatlog__attachment-generic-size {
+            color: #72767d;
+            font-size: 12px;
+        }
+
+        .chatlog__attachment-generic-name {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__edited-timestamp {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__embed {
+            display: flex;
+            margin-top: 0.3em;
+            max-width: 520px;
+        }
+
+        .chatlog__embed-color-pill {
+            flex-shrink: 0;
+            width: 0.25em;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .chatlog__embed-color-pill--default {
+            background-color: #202225;
+        }
+
+        .chatlog__embed-content-container {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5em 0.6em;
+            background-color: rgba(46, 48, 54, 0.3);
+            border: 1px solid rgba(46, 48, 54, 0.6);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        .chatlog__embed-content {
+            display: flex;
+            width: 100%;
+        }
+
+        .chatlog__embed-text {
+            flex: 1;
+        }
+
+        .chatlog__embed-author {
+            display: flex;
+            margin-bottom: 0.3em;
+            align-items: center;
+        }
+
+        .chatlog__embed-author-icon {
+            margin-right: 0.5em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .chatlog__embed-author-name {
+            font-size: 0.875em;
+            font-weight: 600;
+            color: #ffffff
+        }
+
+        .chatlog__embed-author-name-link {
+            color: #ffffff;
+        }
+
+        .chatlog__embed-title {
+            margin-bottom: 0.2em;
+            font-size: 0.875em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .chatlog__embed-description {
+            font-weight: 500;
+            font-size: 0.85em;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-fields {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .chatlog__embed-field {
+            flex: 0;
+            min-width: 100%;
+            max-width: 506px;
+            padding-top: 0.6em;
+            font-size: 0.875em;
+        }
+
+        .chatlog__embed-field--inline {
+            flex: 1;
+            flex-basis: auto;
+            min-width: 150px;
+        }
+
+        .chatlog__embed-field-name {
+            margin-bottom: 0.2em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .chatlog__embed-field-value {
+            font-weight: 500;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-thumbnail {
+            flex: 0;
+            margin-left: 1.2em;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-image-container {
+            margin-top: 0.6em;
+        }
+
+        .chatlog__embed-image {
+            max-width: 500px;
+            max-height: 400px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-footer {
+            margin-top: 0.6em;
+            color: #dcddde;
+        }
+
+        .chatlog__embed-footer-icon {
+            margin-right: 0.2em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .chatlog__embed-footer-text {
+            vertical-align: middle;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        .chatlog__embed-youtube-container {
+            margin-top: 0.6em;
+        }
+
+        .chatlog__embed-youtube {
+            border: 0;
+            border-radius: 3px;
+        }
+
+        .chatlog__reactions {
+            display: flex;
+        }
+
+        .chatlog__reaction {
+            display: flex;
+            align-items: center;
+            margin: 0.35em 0.1em 0.1em 0.1em;
+            padding: 0.2em 0.35em;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        .chatlog__reaction-count {
+            min-width: 9px;
+            margin-left: 0.35em;
+            font-size: 0.875em;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .chatlog__bot-tag {
+            position: relative;
+            top: -.2em;
+            margin-left: 0.3em;
+            padding: 0.05em 0.3em;
+            border-radius: 3px;
+            vertical-align: middle;
+            line-height: 1.3;
+            background-color: #5865F2;
+            color: #ffffff;
+            font-size: 0.625em;
+            font-weight: 500;
+        }
+
+        .postamble {
+            margin: 1.4em 0.3em 0.6em 0.3em;
+            padding: 1em;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .postamble__entry {
+            color: #ffffff;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler-text--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler-text--hidden');
+            }
+            if (element && element.classList.contains('chatlog__attachment--hidden')) {
+                event.preventDefault();
+                element.classList.remove('chatlog__attachment--hidden');
+            }
+        }
+    </script>
+
+    <svg style="display: none">
+        <symbol id="icon-attachment" viewBox="0 0 720 960">
+            <path fill="#f4f5fb" d="M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z" />
+            <path fill="#7789c4" d="M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z" />
+            <path fill="#f4f5fb" d="M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z" />
+            <path fill="#7789c4" d="M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z" />
+        </symbol>
+    </svg>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/785755670807838740/a_1c63ecb8425a5ffde8c99ba4425546de.png" alt="Guild icon" loading="lazy">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">&#119816;&#119846;&#119849;&#119838;&#119851;&#119842;&#119854;&#119846; &#119819;&#119834;&#119853;&#119834;&#119846;│&#119816;.&#119819;</div>
+        <div class="preamble__entry">&#128081;════General═════&#128081; / ╢&#128217;╟❱&#120029;ick❰</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 09:10 AM</span>
+
+            <div class="chatlog__message " data-message-id="868857797444501514" id="message-868857797444501514" title="Message sent: 25-Jul-21 09:10 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">ILGabriel0601 [Premiun]</span>
+
+                                <span class="chatlog__edited-timestamp" title="25-Jul-21 09:13 AM">(edited)</span>
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868857794890199060/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868857794890199060/unknown.png" alt="Image attachment" title="Image: unknown.png (1,87 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868858875389022208" id="message-868858875389022208" title="Message sent: 25-Jul-21 09:14 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Gabriel0601[No Premiun]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868858884624896010" id="message-868858884624896010" title="Message sent: 25-Jul-21 09:15 AM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868858881164607558/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868858881164607558/unknown.png" alt="Image attachment" title="Image: unknown.png (2,24 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868859538772750337" id="message-868859538772750337" title="Message sent: 25-Jul-21 09:17 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><strong>Pongan sus Nick asi</strong> con la cara de cada uno</span>
+
+                                <span class="chatlog__edited-timestamp" title="25-Jul-21 09:17 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868859627654242416" id="message-868859627654242416" title="Message sent: 25-Jul-21 09:17 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><span class="mention">@everyone</span></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/862211214943846482/d33a17ca7bc29f2588bdcb9680c147c7.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="latiqo#2718" data-user-id="862211214943846482" style="">latiqo</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 09:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="868859874082181171" id="message-868859874082181171" title="Message sent: 25-Jul-21 09:18 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Sapnap[No Premium]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/785702721482391573/f61ad07ff77ad669024caae773b6bd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel0601#4479" data-user-id="785702721482391573" style="color: rgb(241,196,15)">「King亗NICE</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 09:23 AM</span>
+
+            <div class="chatlog__message " data-message-id="868860932103761950" id="message-868860932103761950" title="Message sent: 25-Jul-21 09:23 AM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868860929817862204/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868860929817862204/unknown.png" alt="Image attachment" title="Image: unknown.png (17,46 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/862211214943846482/d33a17ca7bc29f2588bdcb9680c147c7.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="latiqo#2718" data-user-id="862211214943846482" style="">latiqo</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 09:23 AM</span>
+
+            <div class="chatlog__message " data-message-id="868861002626773002" id="message-868861002626773002" title="Message sent: 25-Jul-21 09:23 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">mira soi alets</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868861101239070760" id="message-868861101239070760" title="Message sent: 25-Jul-21 09:23 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Sapnap [Premium]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/739313627986657310/60ff15ac3a19ba7da68594a60974caa0.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Bryan_visarr#1091" data-user-id="739313627986657310" style="">Bryan_visarr</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 09:41 AM</span>
+
+            <div class="chatlog__message " data-message-id="868865482038603806" id="message-868865482038603806" title="Message sent: 25-Jul-21 09:41 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Peor</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/825564539838922772/e5227dba5b958c6fec6c1ad23e8ac03f.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="NameFakeTwo#9389" data-user-id="825564539838922772" style="color: rgb(84,110,122)">NameFakeTwo</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 10:01 AM</span>
+
+            <div class="chatlog__message " data-message-id="868870538758610954" id="message-868870538758610954" title="Message sent: 25-Jul-21 10:01 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Snwx_ [Premiun]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868870884109201471" id="message-868870884109201471" title="Message sent: 25-Jul-21 10:02 AM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868870882301468762/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868870882301468762/unknown.png" alt="Image attachment" title="Image: unknown.png (62 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/729396267830083674/3f07ebd3ba05b93ed736b39b698f8291.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="RaulECU#2874" data-user-id="729396267830083674" style="">RaulECU</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 10:57 AM</span>
+
+            <div class="chatlog__message " data-message-id="868884723294961745" id="message-868884723294961745" title="Message sent: 25-Jul-21 10:57 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><em>SmallGamerz</em>  [Premium]</span>
+
+                                <span class="chatlog__edited-timestamp" title="25-Jul-21 11:55 AM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868885449639338094" id="message-868885449639338094" title="Message sent: 25-Jul-21 11:00 AM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868885447412174938/AEA.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868885447412174938/AEA.png" alt="Image attachment" title="Image: AEA.png (11,78 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/839859828994211840/d97da235adb8daa7633714c3c745dcad.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="&#129488;&#129346;#3134" data-user-id="839859828994211840" style="color: rgb(7,0,65)">&#129488;&#129346;</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 11:02 AM</span>
+
+            <div class="chatlog__message " data-message-id="868885955417886770" id="message-868885955417886770" title="Message sent: 25-Jul-21 11:02 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">ImLay_[Premiun]</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868885953392021554/Screenshot_20210725_110202.jpg">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868885953392021554/Screenshot_20210725_110202.jpg" alt="Image attachment" title="Image: Screenshot_20210725_110202.jpg (5,63 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/758011237832327271/4e531056faf8e0ee94f9284850384d5e.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Gabriel1234#3571" data-user-id="758011237832327271" style="color: rgb(3,1,1)">SnowDark</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 12:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="868902468141084672" id="message-868902468141084672" title="Message sent: 25-Jul-21 12:08 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">G_Ale [Premium]</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868902466111037450/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868902466111037450/unknown.png" alt="Image attachment" title="Image: unknown.png (3,38 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/668512954026688512/d90734dad336fbef3357c425a3a91a6b.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="M4UR1C10 XD#6423" data-user-id="668512954026688512" style="">M4UR1C10 XD</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 12:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="868905547754246214" id="message-868905547754246214" title="Message sent: 25-Jul-21 12:20 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">MauricioNOESREAL [Premium]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868905560542707723" id="message-868905560542707723" title="Message sent: 25-Jul-21 12:20 PM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868905556017041458/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868905556017041458/unknown.png" alt="Image attachment" title="Image: unknown.png (7,92 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868905673981833237" id="message-868905673981833237" title="Message sent: 25-Jul-21 12:20 PM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868905670471213156/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868905670471213156/unknown.png" alt="Image attachment" title="Image: unknown.png (1,96 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/862211214943846482/d33a17ca7bc29f2588bdcb9680c147c7.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="latiqo#2718" data-user-id="862211214943846482" style="">latiqo</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 01:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="868917764247650355" id="message-868917764247650355" title="Message sent: 25-Jul-21 01:08 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">trrip [Premium]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/756305046316253264/93b2bdd145179d8de59cf945499bc487.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ⱥm℘yτo#0234" data-user-id="756305046316253264" style="color: rgb(17,128,106)">尽其所能地将你的悲惨的屁股</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 01:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="868919119355969576" id="message-868919119355969576" title="Message sent: 25-Jul-21 01:14 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">edgamer138 [no premiun]</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868919113978888272/Captura_de_pantalla_80.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868919113978888272/Captura_de_pantalla_80.png" alt="Image attachment" title="Image: Captura_de_pantalla_80.png (8,25 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/852761595372109825/1dafe4912c34d6e0266420138ee9d7f6.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="A.G.O.T.I#3926" data-user-id="852761595372109825" style="color: rgb(151,156,159)">A.G.O.T.I</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 01:27 PM</span>
+
+            <div class="chatlog__message " data-message-id="868922483057782824" id="message-868922483057782824" title="Message sent: 25-Jul-21 01:27 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Y justo borre las capturas xD</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868922702386327592" id="message-868922702386327592" title="Message sent: 25-Jul-21 01:28 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">ELyoelMC[no premiun]
+
+Fotos no tengo porque  las borre</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/667504895770886145/26f0f46107fd00018ad4270561bb7a1b.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="adrianooo....#9673" data-user-id="667504895770886145" style="color: rgb(140,255,0)">adrianoooo....</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 01:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="868924832635551744" id="message-868924832635551744" title="Message sent: 25-Jul-21 01:37 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">adriano9485 [no Premiun]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/756993154909208678/49924a267d128e1caa1a96fedf36cea2.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="๖̶ζ͜͡ddtle✞#6666" data-user-id="756993154909208678" style="color: rgb(99,0,157)">Valentino_XDXD</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 02:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="868934484265938985" id="message-868934484265938985" title="Message sent: 25-Jul-21 02:15 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">valentino_XDXD [premiun]</span>
+
+                                <span class="chatlog__edited-timestamp" title="25-Jul-21 02:15 PM">(edited)</span>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="868934503018680421" id="message-868934503018680421" title="Message sent: 25-Jul-21 02:15 PM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868934498664972388/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868934498664972388/unknown.png" alt="Image attachment" title="Image: unknown.png (4,51 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/745346119613022438/e85e583b2c079452060c11fc1cfa36af.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Bee&#39;s Fan#6939" data-user-id="745346119613022438" style="color: rgb(14,255,0)">Bee&#39;s Fan</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 02:39 PM</span>
+
+            <div class="chatlog__message " data-message-id="868940431344414741" id="message-868940431344414741" title="Message sent: 25-Jul-21 02:39 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">BeesFan [Premium] (Nueva skin saliendo pronto)</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868940428089651200/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868940428089651200/unknown.png" alt="Image attachment" title="Image: unknown.png (2,51 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <img class="chatlog__reference-avatar" src="https://cdn.discordapp.com/avatars/745346119613022438/e85e583b2c079452060c11fc1cfa36af.png?size=40" alt="Avatar" loading="lazy">
+                <span class="chatlog__reference-name" title="Bee&#39;s Fan#6939" style="color: rgb(14,255,0)">Bee&#39;s Fan</span>
+                <div class="chatlog__reference-content">
+                    <span class="chatlog__reference-link" onclick="scrollToMessage(event, &#39;868940431344414741&#39;)">
+BeesFan [Premium] (Nueva skin saliendo pronto)                    </span>
+
+                </div>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/729396267830083674/3f07ebd3ba05b93ed736b39b698f8291.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="RaulECU#2874" data-user-id="729396267830083674" style="">RaulECU</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 03:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="868950084430221382" id="message-868950084430221382" title="Message sent: 25-Jul-21 03:17 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><img loading="lazy" class="emoji emoji--large" alt="👍" title="thumbsup" src="https://twemoji.maxcdn.com/2/svg/1f44d.svg"></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/667504895770886145/26f0f46107fd00018ad4270561bb7a1b.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="adrianooo....#9673" data-user-id="667504895770886145" style="color: rgb(140,255,0)">adrianoooo....</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 03:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="868954750027177994" id="message-868954750027177994" title="Message sent: 25-Jul-21 03:35 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace"><img loading="lazy" class="emoji emoji--large" alt="👍" title="thumbsup" src="https://twemoji.maxcdn.com/2/svg/1f44d.svg"><img loading="lazy" class="emoji emoji--large" alt="🏽" title="🏽" src="https://twemoji.maxcdn.com/2/svg/1f3fd.svg"></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/702235470939160688/1910575aa95616c89143a17afe08adc9.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Luchearno#0673" data-user-id="702235470939160688" style="color: rgb(151,156,159)">Luchearno</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 05:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="868987649984200739" id="message-868987649984200739" title="Message sent: 25-Jul-21 05:46 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">LucianoChispita [No premium]</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/868987648004472872/aa2.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/868987648004472872/aa2.png" alt="Image attachment" title="Image: aa2.png (1,24 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/556179661718159381/f14b92a2195f61d0008c8f692783cd6d.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Dylanchispita#8501" data-user-id="556179661718159381" style="color: rgb(112,0,255)">Dylanchispita</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-21 07:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="869020780925689887" id="message-869020780925689887" title="Message sent: 25-Jul-21 07:58 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Dylanchispita [no premiun]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="869020836483436574" id="message-869020836483436574" title="Message sent: 25-Jul-21 07:58 PM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/869020832461111316/abc.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/869020832461111316/abc.png" alt="Image attachment" title="Image: abc.png (1,37 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/761887580970287127/cfc65884fd3818ab71c27fbadbdb1e96.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="alensoxgamer126#7783" data-user-id="761887580970287127" style="color: rgb(19,100,121)">alensoxgamer12</span>
+
+
+        <span class="chatlog__timestamp">26-Jul-21 08:09 AM</span>
+
+            <div class="chatlog__message " data-message-id="869204724019245087" id="message-869204724019245087" title="Message sent: 26-Jul-21 08:09 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">dylanblack (n premium)</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/742393076840136705/f5d7512fd948e99b6c11fe69c19cb297.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="shakerlox YT#2963" data-user-id="742393076840136705" style="color: rgb(151,156,159)">shakerlox YT</span>
+
+
+        <span class="chatlog__timestamp">26-Jul-21 10:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="869241101851189278" id="message-869241101851189278" title="Message sent: 26-Jul-21 10:33 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">shakerloxYT</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="869241413093687317" id="message-869241413093687317" title="Message sent: 26-Jul-21 10:35 AM">
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/869241411017535508/descarga.jpg">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/869241411017535508/descarga.jpg" alt="Image attachment" title="Image: descarga.jpg (4,78 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="869241580974907473" id="message-869241580974907473" title="Message sent: 26-Jul-21 10:35 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">[no premium con skin]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <img class="chatlog__reference-avatar" src="https://cdn.discordapp.com/avatars/742393076840136705/f5d7512fd948e99b6c11fe69c19cb297.png?size=40" alt="Avatar" loading="lazy">
+                <span class="chatlog__reference-name" title="shakerlox YT#2963" style="color: rgb(151,156,159)">shakerlox YT</span>
+                <div class="chatlog__reference-content">
+                    <span class="chatlog__reference-link" onclick="scrollToMessage(event, &#39;869241413093687317&#39;)">
+                            <em>Click to see attachment</em> <span>🖼️</span>
+                    </span>
+
+                </div>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/729396267830083674/3f07ebd3ba05b93ed736b39b698f8291.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="RaulECU#2874" data-user-id="729396267830083674" style="">RaulECU</span>
+
+
+        <span class="chatlog__timestamp">26-Jul-21 11:16 AM</span>
+
+            <div class="chatlog__message " data-message-id="869251867673260032" id="message-869251867673260032" title="Message sent: 26-Jul-21 11:16 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Esa es la skin de cibergun xd</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693995328067731520/716d95844dc026c0104a640a9029875b.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Santino_Lr#3461" data-user-id="693995328067731520" style="">Santino_Lr</span>
+
+
+        <span class="chatlog__timestamp">26-Jul-21 11:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="869260976069935144" id="message-869260976069935144" title="Message sent: 26-Jul-21 11:52 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">SantinoLr [no premium]</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/869260973318475846/namemc.PNG">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/869260973318475846/namemc.PNG" alt="Image attachment" title="Image: namemc.PNG (38,6 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <img class="chatlog__reference-avatar" src="https://cdn.discordapp.com/avatars/729396267830083674/3f07ebd3ba05b93ed736b39b698f8291.png?size=40" alt="Avatar" loading="lazy">
+                <span class="chatlog__reference-name" title="RaulECU#2874" style="">RaulECU</span>
+                <div class="chatlog__reference-content">
+                    <span class="chatlog__reference-link" onclick="scrollToMessage(event, &#39;869251867673260032&#39;)">
+Esa es la skin de cibergun xd                    </span>
+
+                </div>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/742393076840136705/f5d7512fd948e99b6c11fe69c19cb297.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="shakerlox YT#2963" data-user-id="742393076840136705" style="color: rgb(151,156,159)">shakerlox YT</span>
+
+
+        <span class="chatlog__timestamp">26-Jul-21 04:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="869338184352428062" id="message-869338184352428062" title="Message sent: 26-Jul-21 04:59 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Q tiene</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/844531081570942997/4fc8fd1793eb42104879af9923021a80.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Necro#5889" data-user-id="844531081570942997" style="">Necro</span>
+
+
+        <span class="chatlog__timestamp">27-Jul-21 05:27 PM</span>
+
+            <div class="chatlog__message " data-message-id="869707542043975690" id="message-869707542043975690" title="Message sent: 27-Jul-21 05:27 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">DreamPatoo [No Premium]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/699747029630320811/903335b424d31c46adc096acf0287c15.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="libi#3666" data-user-id="699747029630320811" style="color: rgb(7,0,65)">libi</span>
+
+
+        <span class="chatlog__timestamp">27-Jul-21 09:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="869762207360106526" id="message-869762207360106526" title="Message sent: 27-Jul-21 09:04 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">libvy ( premium )</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/703678331132051589/80402ea3a2f50737793ac14ee2389097.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Leo_342#0382" data-user-id="703678331132051589" style="">Leo_342</span>
+
+
+        <span class="chatlog__timestamp">29-Jul-21 09:12 AM</span>
+
+            <div class="chatlog__message " data-message-id="870307702847467611" id="message-870307702847467611" title="Message sent: 29-Jul-21 09:12 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Leo_342 [Premium]</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <span class="chatlog__reference-unknown">
+                    Original message was deleted.
+                </span>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/756993154909208678/49924a267d128e1caa1a96fedf36cea2.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="๖̶ζ͜͡ddtle✞#6666" data-user-id="756993154909208678" style="color: rgb(99,0,157)">Valentino_XDXD</span>
+
+
+        <span class="chatlog__timestamp">02-Aug-21 09:05 AM</span>
+
+            <div class="chatlog__message " data-message-id="871755546208911370" id="message-871755546208911370" title="Message sent: 02-Aug-21 09:05 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">era mi antigua skin <img loading="lazy" class="emoji " alt="😡" title="rage" src="https://twemoji.maxcdn.com/2/svg/1f621.svg"></span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <span class="chatlog__reference-unknown">
+                    Original message was deleted.
+                </span>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/667504895770886145/26f0f46107fd00018ad4270561bb7a1b.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="adrianooo....#9673" data-user-id="667504895770886145" style="color: rgb(140,255,0)">adrianoooo....</span>
+
+
+        <span class="chatlog__timestamp">02-Aug-21 01:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="871816015762300929" id="message-871816015762300929" title="Message sent: 02-Aug-21 01:05 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">skin muy machista</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/729396267830083674/3f07ebd3ba05b93ed736b39b698f8291.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="RaulECU#2874" data-user-id="729396267830083674" style="">RaulECU</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-21 08:17 AM</span>
+
+            <div class="chatlog__message " data-message-id="872105899966222387" id="message-872105899966222387" title="Message sent: 03-Aug-21 08:17 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">(Nuevo nick)</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="872105926012850206" id="message-872105926012850206" title="Message sent: 03-Aug-21 08:17 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Chavez28_</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/739313627986657310/60ff15ac3a19ba7da68594a60974caa0.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Bryan_visarr#1091" data-user-id="739313627986657310" style="">Bryan_visarr</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-21 08:27 AM</span>
+
+            <div class="chatlog__message " data-message-id="872108470554492938" id="message-872108470554492938" title="Message sent: 03-Aug-21 08:27 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Bryan_visarr [Premium]</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/872108468683800596/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/872108468683800596/unknown.png" alt="Image attachment" title="Image: unknown.png (26,94 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/559452033648951357/0380f766338421b2cdf612ac0cf38538.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="miguelj_D#0469" data-user-id="559452033648951357" style="color: rgb(7,0,65)">I.L &#120054;&#120050;&#120048;&#120062;&#120046;&#120053;&#120051;_&#120019;/ A S A D O</span>
+
+
+        <span class="chatlog__timestamp">06-Aug-21 09:48 AM</span>
+
+            <div class="chatlog__message " data-message-id="873215924222701598" id="message-873215924222701598" title="Message sent: 06-Aug-21 09:48 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">miguelj_D</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/822472123690909727/10be1bbd162122631d9269393807fa0a.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pipapiu#5688" data-user-id="822472123690909727" style="color: rgb(14,255,0)">pipapiu</span>
+
+
+        <span class="chatlog__timestamp">06-Aug-21 10:38 AM</span>
+
+            <div class="chatlog__message " data-message-id="873228639309815868" id="message-873228639309815868" title="Message sent: 06-Aug-21 10:38 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">wanateqqq</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/766019323357036565/8d40342cbd8020d2a04c435ee02dea17.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="itashi#4002" data-user-id="766019323357036565" style="color: rgb(19,100,121)">mritachi117シ</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-21 07:38 AM</span>
+
+            <div class="chatlog__message " data-message-id="875357518849794118" id="message-875357518849794118" title="Message sent: 12-Aug-21 07:38 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">yo ser mritachi117</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="875357616350584922" id="message-875357616350584922" title="Message sent: 12-Aug-21 07:38 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">y no cer premiun por k esto es latinoamerica</span>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction" title="xd">
+                                <img class="emoji emoji--small" alt="xd" src="https://cdn.discordapp.com/emojis/869285106597130250.gif" loading="lazy">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <img class="chatlog__reference-avatar" src="https://cdn.discordapp.com/avatars/822472123690909727/10be1bbd162122631d9269393807fa0a.png?size=40" alt="Avatar" loading="lazy">
+                <span class="chatlog__reference-name" title="pipapiu#5688" style="color: rgb(14,255,0)">pipapiu</span>
+                <div class="chatlog__reference-content">
+                    <span class="chatlog__reference-link" onclick="scrollToMessage(event, &#39;873228639309815868&#39;)">
+wanateqqq                    </span>
+
+                </div>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/812039679788056617/69196ed42061b493faa764136da0ff48.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="casme_YT(じます)#4094" data-user-id="812039679788056617" style="">casme_YT(じます)</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-21 08:51 AM</span>
+
+            <div class="chatlog__message " data-message-id="875375894695395348" id="message-875375894695395348" title="Message sent: 12-Aug-21 08:51 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">puto</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/622203914133176330/4a9af4fc8b99ec15c784e6fc6412d1fc.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Chispitaaas;D#7317" data-user-id="622203914133176330" style="color: rgb(230,126,34)">Cripter</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-21 10:59 AM</span>
+
+            <div class="chatlog__message " data-message-id="875408135324598352" id="message-875408135324598352" title="Message sent: 12-Aug-21 10:59 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">cripter123</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <img class="chatlog__reference-avatar" src="https://cdn.discordapp.com/avatars/822472123690909727/10be1bbd162122631d9269393807fa0a.png?size=40" alt="Avatar" loading="lazy">
+                <span class="chatlog__reference-name" title="pipapiu#5688" style="color: rgb(14,255,0)">pipapiu</span>
+                <div class="chatlog__reference-content">
+                    <span class="chatlog__reference-link" onclick="scrollToMessage(event, &#39;873228639309815868&#39;)">
+wanateqqq                    </span>
+
+                </div>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/812039679788056617/69196ed42061b493faa764136da0ff48.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="casme_YT(じます)#4094" data-user-id="812039679788056617" style="">casme_YT(じます)</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-21 11:02 AM</span>
+
+            <div class="chatlog__message " data-message-id="875408823588913262" id="message-875408823588913262" title="Message sent: 12-Aug-21 11:02 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">sos reputin</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/622203914133176330/4a9af4fc8b99ec15c784e6fc6412d1fc.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Chispitaaas;D#7317" data-user-id="622203914133176330" style="color: rgb(230,126,34)">Cripter</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-21 11:15 AM</span>
+
+            <div class="chatlog__message " data-message-id="875412120232136734" id="message-875412120232136734" title="Message sent: 12-Aug-21 11:15 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">cripter123</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/875412118281809940/Sin_titulo_-_Google_Chrome_12_8_2021_12_56_51_2.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/875412118281809940/Sin_titulo_-_Google_Chrome_12_8_2021_12_56_51_2.png" alt="Image attachment" title="Image: Sin_titulo_-_Google_Chrome_12_8_2021_12_56_51_2.png (8,45 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="875412257784332339" id="message-875412257784332339" title="Message sent: 12-Aug-21 11:15 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">parte de atras</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/875412255997583360/Editor_de_aspectos_de_Minecraft_-_Google_Chrome_12_8_2021_13_08_35_2.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/875412255997583360/Editor_de_aspectos_de_Minecraft_-_Google_Chrome_12_8_2021_13_08_35_2.png" alt="Image attachment" title="Image: Editor_de_aspectos_de_Minecraft_-_Google_Chrome_12_8_2021_13_08_35_2.png (21,35 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="875412376881610832" id="message-875412376881610832" title="Message sent: 12-Aug-21 11:16 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">piola</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="875412554023862322" id="message-875412554023862322" title="Message sent: 12-Aug-21 11:16 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Chi</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="875412659925835846" id="message-875412659925835846" title="Message sent: 12-Aug-21 11:17 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">spa</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+        <div class="chatlog__reference-symbol"></div>
+        <div class="chatlog__reference">
+                <img class="chatlog__reference-avatar" src="https://cdn.discordapp.com/avatars/622203914133176330/4a9af4fc8b99ec15c784e6fc6412d1fc.png?size=40" alt="Avatar" loading="lazy">
+                <span class="chatlog__reference-name" title="Chispitaaas;D#7317" style="color: rgb(230,126,34)">Cripter</span>
+                <div class="chatlog__reference-content">
+                    <span class="chatlog__reference-link" onclick="scrollToMessage(event, &#39;875412257784332339&#39;)">
+parte de atras                    </span>
+
+                </div>
+        </div>
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/812039679788056617/69196ed42061b493faa764136da0ff48.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="casme_YT(じます)#4094" data-user-id="812039679788056617" style="">casme_YT(じます)</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-21 11:49 AM</span>
+
+            <div class="chatlog__message " data-message-id="875420638125383714" id="message-875420638125383714" title="Message sent: 12-Aug-21 11:49 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">pero no se le ve el qlo xd</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/559452033648951357/0380f766338421b2cdf612ac0cf38538.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="miguelj_D#0469" data-user-id="559452033648951357" style="color: rgb(7,0,65)">I.L &#120054;&#120050;&#120048;&#120062;&#120046;&#120053;&#120051;_&#120019;/ A S A D O</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-21 12:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="875792037822210149" id="message-875792037822210149" title="Message sent: 13-Aug-21 12:24 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">miguelj_D (premiun)</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/875792036069015622/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/875792036069015622/unknown.png" alt="Image attachment" title="Image: unknown.png (2,81 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/701769151395659857/a0c87ac2dd2a4550935363d1e37fa1a6.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title=".....1#2265" data-user-id="701769151395659857" style="">.....1</span>
+
+
+        <span class="chatlog__timestamp">14-Aug-21 01:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="876165409693397022" id="message-876165409693397022" title="Message sent: 14-Aug-21 01:08 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Sexosexo , wismichu (No premium), tengo Miles de tokens de Cuentas premium</span>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction" title="Facebook_hot">
+                                <img class="emoji emoji--small" alt="Facebook_hot" src="https://cdn.discordapp.com/emojis/869020397780205598.png" loading="lazy">
+                                <span class="chatlog__reaction-count">7</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/837824196062609458/b4d5ca3a4120dc0dd995cb739cc024df.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Firzah#3105" data-user-id="837824196062609458" style="color: rgb(151,156,159)">EL BM</span>
+
+
+        <span class="chatlog__timestamp">18-Aug-21 11:19 AM</span>
+
+            <div class="chatlog__message " data-message-id="877587506999197717" id="message-877587506999197717" title="Message sent: 18-Aug-21 11:19 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">pijas locas</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/774671338320429067/24273218862ef0892f973320455ba3bb.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Yiro?#6319" data-user-id="774671338320429067" style="color: rgb(151,156,159)">Yiro-Bxquero01</span>
+
+
+        <span class="chatlog__timestamp">18-Aug-21 09:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="877738694143000647" id="message-877738694143000647" title="Message sent: 18-Aug-21 09:20 PM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Bxquero01 (Premium)</span>
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+
+<div class="chatlog__message-group">
+
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/809108314427228162/69f8d6cd8657b38a5307fe1979b6ab34.png?size=40" alt="Avatar" loading="lazy">
+    </div>
+
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Loze#9999" data-user-id="809108314427228162" style="color: rgb(16,123,134)">Loze</span>
+
+
+        <span class="chatlog__timestamp">22-Aug-21 09:19 AM</span>
+
+            <div class="chatlog__message " data-message-id="879006945460252672" id="message-879006945460252672" title="Message sent: 22-Aug-21 09:19 AM">
+                    <div class="chatlog__content">
+                        <div class="markdown">
+                            <span class="preserve-whitespace">Snwx_ [Premiun]</span>
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__attachment " onclick="">
+
+                            <a href="https://cdn.discordapp.com/attachments/868857134295695420/879006943333744650/unknown.png">
+                                <img class="chatlog__attachment-media" src="https://cdn.discordapp.com/attachments/868857134295695420/879006943333744650/unknown.png" alt="Image attachment" title="Image: unknown.png (52,19 KB)" loading="lazy">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 65 message(s)</div>
+</div>
+
+</body>
+
+</html>
